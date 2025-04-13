@@ -138,11 +138,11 @@ const spells = [
 // ------------------
 
 // 1. Spell Cards 
-function displaySpells(){ 
+function displaySpells(spellsArray = spells) { //update to accept array (default to spells arr)  
   const container = document.getElementById("spellsContainer");
   container.innerHTML = ""; // Clear previous content
 
-  spells.forEach(spell => {
+  spellsArray.forEach(spell => {
     const card = document.createElement("div");
     card.classList.add("spell-card");
     
@@ -191,9 +191,27 @@ function showSpellDetails(spell){
     `
 }
 
+// 3. Filter function 
+function filterSpells(){
+  const searchTerm = document.getElementById("searchBar").value.toLowerCase();
+  const filterValue = document.getElementById("filterSelect").value.toLowerCase();
+
+  const filteredSpells = spells.filter(spell => {
+    const matchesSearch = spell.name.toLowerCase().includes(searchTerm) || spell.description.toLowerCase().includes(searchTerm);
+    const matchesCategory = (filterValue === "all") || spell.category.some(
+      cat => cat.toLowerCase() === filterValue
+    );
+    return matchesSearch && matchesCategory;
+  });
+  displaySpells(filteredSpells);
+}
+
 // ------------------
 // on load  
 // ------------------
 document.addEventListener("DOMContentLoaded", () => {
   displaySpells();
+
+  document.getElementById("searchBar").addEventListener("input", filterSpells);
+  document.getElementById("filterSelect").addEventListener("change", filterSpells);
 });
