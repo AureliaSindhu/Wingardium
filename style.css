@@ -1,11 +1,12 @@
 :root {
   /* color palette */
-  --prim: #822621;
-  --sec: #af6451;
-  --ter: #f7edd4;
-  --text: #162c11;
-  --icon: #a6ba99;
-  --textFill: #d8e7cd;
+  --prim:    #7e1e1e; 
+  --sec:     #91452a; 
+  --ter:     #88a28e; 
+  --accent:  #d96608; 
+  --icon:    #4b603d; 
+  --text:    #200910; 
+  --textFill:#f3f0eb; 
 
   /* typography */
   --title: 48px;
@@ -35,7 +36,7 @@ a {
   transition: color 0.5s ease;
 }
 a:hover {
-  color: var(--sec);
+  color: var(--accent);
 }
 
 /* header */
@@ -68,19 +69,21 @@ main {
   padding: 10px 20px;
 }
 
-.hero h2, p{
+/* hero */
+.hero h2,
+.hero p {
   margin: 0;
   padding-bottom: 10px;
 }
 
 .hero-content {
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
-/* left: menu */
+/* left */
 .left {
-  flex: 3; 
+  flex: 3;
   display: flex;
   flex-direction: column;
 }
@@ -106,6 +109,7 @@ main {
   background: var(--textFill);
 }
 
+/* product */
 .product {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -113,7 +117,7 @@ main {
 }
 
 .pCard {
-  background: white;
+  background: #fff;
   padding: 15px;
   border-radius: 8px;
   text-align: center;
@@ -134,6 +138,7 @@ main {
   margin: 10px 0 5px;
   font-size: var(--subparagraph);
 }
+
 .pCard p {
   font-size: var(--paragraphs);
   margin-bottom: 10px;
@@ -153,12 +158,13 @@ main {
   background: var(--prim);
 }
 
-/* right: shopping cart */
+/* right */
 .right {
   flex: 1;
 }
+
 .cart {
-  background: white;
+  background: #fff;
   padding: 20px;
   border-radius: 8px;
 }
@@ -223,8 +229,8 @@ footer {
   align-items: center;
   padding: 10px;
   background-color: var(--sec);
+  color: #fff;
 }
-
 footer p {
-  padding: 0;
+  margin: 0;
 }
