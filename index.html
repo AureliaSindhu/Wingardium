@@ -8,8 +8,8 @@
   </head>
 
   <body>
-    <header> 
-      <h1 class="title"> aacode</h1>
+    <header>
+      <h1 class="title">aacode</h1>
       <ul>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
@@ -17,13 +17,73 @@
     </header>
 
     <main>
-      <h2>Menu</h2>
+      <div class="hero">
+        <h2>Welcome to aacode Cafe</h2>
+        <p>Your favorite place for delicious toasts!</p>
+      </div>
+      
+      <div class="hero-content">
+        <!-- left: menu -->
+        <section class="left">
+          <div class="search-filter">
+            <input 
+              type="text" 
+              id="searchBar" 
+              placeholder="Search toast..."
+              aria-label="Search Menu"
+            />
+            <select id="filterSelect" aria-label="Filter Menu">
+              <option value="all">All</option>
+              <option value="savory">Savory</option>
+              <option value="sweet">Sweet</option>
+            </select>
+          </div>
+
+          <!-- product -->
+          <div class="product" id="menuItemsContainer">
+
+            <!-- placeholder -->
+            <div class="pCard">
+              <img src="toast1.jpg" alt="Avocado Toast" />
+              <h3>Avocado Toast</h3>
+              <p>$4.00</p>
+              <button>Add to Cart</button>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- right: shopping cart -->
+        <div class="right">
+          <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+              <li>No items in the cart</li>
+            </ul>
+
+            <div class="cart-summary">
+              <div class="summary-line">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0.00</span>
+              </div>
+              <div class="summary-line">
+                <span>Tax:</span>
+                <span id="tax">$0.00</span>
+              </div>
+              <div class="summary-line total-line">
+                <span>Total:</span>
+                <span id="total">$0.00</span>
+              </div>
+              <button id="checkoutButton">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    
+
     <footer>
       <p>© 2025 aacode Cafe</p>
       <a href="#">Instagram</a>
     </footer>
-
   </body>
 </html>

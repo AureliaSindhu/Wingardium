@@ -1,10 +1,11 @@
-:root { 
+:root {
   /* color palette */
-  --prim:   #822621; 
-  --sec:    #af6451; 
-  --ter:    #f7edd4; 
-  --text:   #162c11; 
-  --icon:   #a6ba99; 
+  --prim: #822621;
+  --sec: #af6451;
+  --ter: #f7edd4;
+  --text: #162c11;
+  --icon: #a6ba99;
+  --textFill: #d8e7cd;
 
   /* typography */
   --title: 48px;
@@ -16,63 +17,204 @@
 html,
 body {
   margin: 0;
-  padding: 10px;
+  padding: 0;
   background: var(--ter);
   color: var(--text);
   font-family: 'Poppins', sans-serif;
 }
 
-::selection,
-a::selection,
-h1::selection,
-h2::selection,
-p::selection,
-.gradient-text::selection {
-    background: #c3c3c3ed;
-    z-index: 1;
-    color: var(--sec);
+::selection {
+  background: #c3c3c3ed;
+  color: var(--sec);
 }
 
-a:-webkit-any-link {
-    text-decoration: none;
-    transition: color 0.5s ease;
-    color: var(--text);
+/* links */
+a {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.5s ease;
 }
-
 a:hover {
-    color: var(--sec);
+  color: var(--sec);
 }
-
 
 /* header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 20px 0 20px;
 }
 
 header h1 {
+  font-size: var(--title);
   margin: 0;
 }
 
 header ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
-  color: var(--text);
-  text-decoration: none;
-  padding: 10px;
+  padding: 0;
   margin: 0;
-}
-
-header ul li {
-  margin: 0 10px;
-  padding: 5px;
   font-size: var(--paragraphs);
 }
 
-/* main */
+header ul li {
+  margin-left: 20px;
+}
 
+/* main */
+main {
+  padding: 10px 20px;
+}
+
+.hero h2, p{
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.hero-content {
+  display: flex;
+  gap: 20px; 
+}
+
+/* left: menu */
+.left {
+  flex: 3; 
+  display: flex;
+  flex-direction: column;
+}
+
+.search-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filter input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--text);
+  border-radius: 4px;
+  background: var(--textFill);
+}
+
+.search-filter select {
+  padding: 8px;
+  border: 1px solid var(--text);
+  border-radius: 4px;
+  background: var(--textFill);
+}
+
+.product {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.pCard {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+.pCard:hover {
+  box-shadow: 0 0 10px #ccc;
+}
+
+.pCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pCard h3 {
+  margin: 10px 0 5px;
+  font-size: var(--subparagraph);
+}
+.pCard p {
+  font-size: var(--paragraphs);
+  margin-bottom: 10px;
+}
+
+.pCard button {
+  background: var(--sec);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pCard button:hover {
+  background: var(--prim);
+}
+
+/* right: shopping cart */
+.right {
+  flex: 1;
+}
+.cart {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cart h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: var(--heading);
+}
+
+#cart-items {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 20px;
+  max-height: 70vh; 
+  overflow-y: auto;  
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-summary {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.total-line {
+  font-weight: bold;
+}
+
+#checkoutButton {
+  width: 100%;
+  background: var(--sec);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: var(--paragraphs);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+#checkoutButton:hover {
+  background: var(--prim);
+}
 
 /* footer */
 footer {
@@ -80,4 +222,9 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  background-color: var(--sec);
+}
+
+footer p {
+  padding: 0;
 }
