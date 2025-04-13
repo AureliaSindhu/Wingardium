@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Wizard's Emporium</title>
-    <meta name="description" content="Explore wondrous magical items" />
+    <title>Wingardium</title>
+    <meta name="description" content="Harry Potter's Spells" />
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="scripts.js"></script>
   </head>
 
   <body>
     <header>
-      <h1 class="title">Wizard's Emporium</h1>
-      <!-- Tagline (instead of 'Hogwarts Magic Catalog' as the main title) -->
+      <h1 class="title">Wingardium</h1>
       <ul>
-        <li><a href="#">Hogwarts Magic Catalog</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </header>
 
     <main>
-      <!-- Hero / Intro Section -->
       <div class="hero">
-        <h2>Welcome to the Wizard's Emporium</h2>
+        <h2>Welcome to the Wizard's Emporium 🧙🏻‍♀️ </h2>
         <p>Discover enchanting spells, potions, and artifacts!</p>
       </div>
       
       <div class="hero-content">
-        <!-- Left Column: Catalog -->
+        <!-- left: spells -->
         <section class="left">
           <div class="search-filter">
             <input 
@@ -37,54 +34,43 @@
             />
             <select id="filterSelect" aria-label="Filter Magic">
               <option value="all">All</option>
-              <option value="spell">Spells</option>
-              <option value="potion">Potions</option>
+              <option value="spell">Charm</option>
+              <option value="potion">Conjuration</option>
+              <option value="potion">Curse</option>
+              <option value="potion">Dark Charm</option>
+              <option value="potion">Healing Spell</option>
+              <option value="potion">Jinx</option>
+              <option value="potion">Transfiguration</option>
+              <option value="potion">Transportation</option>
             </select>
           </div>
 
-          <!-- Product Grid -->
+          <!-- right: details -->
           <div class="product" id="menuItemsContainer">
-            <!-- Placeholder Card Example -->
+            <!-- placeholder -->
             <div class="pCard">
-              <img src="spell1.jpg" alt="Expelliarmus" />
-              <h3>Expelliarmus</h3>
-              <p>Defensive Spell</p>
-              <button>Add to Inventory</button>
+              <img src="spell1.jpg" alt="Alohomora" />
+              <h3>Alohomora</h3>
+              <p>Unlocking Charm</p>
+              <button class="see-details">See Details</button>
             </div>
           </div>
         </section>
 
-        <!-- Right Column: “Shopping Cart” / Inventory -->
-        <div class="right">
+        <!-- right: pop-up details -->
+        <div class="right" id="detailsPanel">
           <div class="cart">
-            <h2>Your Magical Inventory</h2>
-            <ul id="cart-items">
-              <li>No items yet</li>
-            </ul>
-
-            <div class="cart-summary">
-              <div class="summary-line">
-                <span>Subtotal:</span>
-                <span id="subtotal">$0.00</span>
-              </div>
-              <div class="summary-line">
-                <span>Tax:</span>
-                <span id="tax">$0.00</span>
-              </div>
-              <div class="summary-line total-line">
-                <span>Total:</span>
-                <span id="total">$0.00</span>
-              </div>
-              <button id="checkoutButton">Finalize Order</button>
+            <h2>Item Details</h2>
+            <div id="detailContent">
+              <p>No details to display, please click "See Details".</p>
             </div>
           </div>
         </div>
-      </div>
     </main>
 
     <footer>
-      <p>© 2025 Wizard's Emporium</p>
-      <a href="#">Marauder's Map</a>
+      <p>© 2025 Wingardium</p>
+      <a href="https://wallpapersok.com/images/high/the-marauders-map-guide-xktf7jtl2drl826v.jpg">Marauder's Map</a>
     </footer>
   </body>
 </html>
