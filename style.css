@@ -218,8 +218,8 @@ header ul li a:hover::after {
 }
 
 .popup {
-  background: var(--accent);
-  color: var(--prim);
+  background: var(--prim);
+  color: var(--text);
   padding: 25px;
   border-radius: 12px;
   text-align: center;
