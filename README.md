@@ -7,3 +7,5 @@ built with
    <img src="https://img.shields.io/badge/javascript-%23323330.svg?logo=javascript&logoColor=%23F7DF1E&style=for-the-badge" alt="JavaScript" />
    <img src="https://img.shields.io/badge/css3-%231572b6.svg?logo=css3&logoColor=white&style=for-the-badge" alt="CSS3" />
 </div>
+
+<!-- data source: https://harrypotter.fandom.com/wiki/List_of_spells -->

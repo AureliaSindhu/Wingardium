@@ -178,10 +178,18 @@ function displaySpells(spellsArray = spells) { //update to accept array (default
 // 2. Spell Details -- call pop-up
 function showSpellDetails(spell){
   const detailContent = document.getElementById("detailContent"); 
+  
+  const categoriesHTML = spell.category //map through each category for design purposes
+    .map(cat => `<span class="category">${cat}</span>`)
+    .join(" ");
+
   detailContent.innerHTML = `
     <h3>${spell.name}</h3>
     <img src="${spell.image}" alt="${spell.name}">
-    <div class="detail-category"><strong>Category:</strong> ${spell.category.join(", ")}</div>
+    <div class="detail-category">
+      <strong></strong> 
+      ${categoriesHTML}
+    </div>
     <p class="detail-pronunciation"><strong>Pronunciation:</strong> ${spell.pronunciation}</p>
     <p class="detail-description"><strong>Description:</strong> ${spell.description}</p>
     <p><strong>First Mentioned:</strong></p>
