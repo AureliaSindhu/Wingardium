@@ -9,10 +9,10 @@
   --textFill: #c6cdd5;
 
   /* typography */
-  --title: 48px;
+  --title: 36px;
   --heading: 28px;
-  --subparagraph: 20px;
-  --paragraphs: 18px;
+  --subparagraph: 18px;
+  --paragraphs: 15px;
 }
 
 * {
@@ -218,8 +218,8 @@ header ul li a:hover::after {
 }
 
 .popup {
-  background: var(--sec);
-  color: var(--text);
+  background: var(--accent);
+  color: var(--prim);
   padding: 25px;
   border-radius: 12px;
   text-align: center;
@@ -279,10 +279,11 @@ header ul li a:hover::after {
 }
 
 .detail-mentioned li {
-  background: var(--accent);
-  color: var(--prim);
-  padding: 5px 12px;
-  border-radius: 20px;
+  background: var(--sec);
+  color: var(--text);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
   font-size: var(--paragraphs);
 }
 
