@@ -4,7 +4,7 @@
     <title>Wingardium</title>
     <meta name="description" content="Harry Potter's Spells" />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="scripts.js" defer></script>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
 
     <main>
       <div class="hero">
-        <h2>Welcome to the Wizard's Emporium 🧙🏻‍♀️ </h2>
+        <h2>Welcome to the Wizard's Emporium 🧙🏻‍♀️</h2>
         <p>Discover enchanting spells, potions, and artifacts!</p>
       </div>
       
@@ -34,30 +34,24 @@
             />
             <select id="filterSelect" aria-label="Filter Magic">
               <option value="all">All</option>
-              <option value="spell">Charm</option>
-              <option value="potion">Conjuration</option>
-              <option value="potion">Curse</option>
-              <option value="potion">Dark Charm</option>
-              <option value="potion">Healing Spell</option>
-              <option value="potion">Jinx</option>
-              <option value="potion">Transfiguration</option>
-              <option value="potion">Transportation</option>
+              <option value="charm">Charm</option>
+              <option value="conjuration">Conjuration</option>
+              <option value="curse">Curse</option>
+              <option value="dark charm">Dark Charm</option>
+              <option value="healing spell">Healing Spell</option>
+              <option value="jinx">Jinx</option>
+              <option value="transfiguration">Transfiguration</option>
+              <option value="transportation">Transportation</option>
             </select>
           </div>
 
-          <!-- right: details -->
-          <div class="product" id="menuItemsContainer">
-            <!-- placeholder -->
-            <div class="pCard">
-              <img src="spell1.jpg" alt="Alohomora" />
-              <h3>Alohomora</h3>
-              <p>Unlocking Charm</p>
-              <button class="see-details">See Details</button>
-            </div>
+          <!-- Spell Cards -->
+          <div class="product" id="spellsContainer">
+            <!-- integrated in script.js -->
           </div>
         </section>
 
-        <!-- right: pop-up details -->
+        <!-- right: details pop-up -->
         <div class="right" id="detailsPanel">
           <div class="cart">
             <h2>Item Details</h2>
@@ -66,6 +60,7 @@
             </div>
           </div>
         </div>
+      </div>
     </main>
 
     <footer>

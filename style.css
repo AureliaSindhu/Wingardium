@@ -40,7 +40,7 @@ a:hover {
   color: var(--accent);
 }
 
-/* header */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -95,29 +95,22 @@ main {
   margin-bottom: 20px;
 }
 
-.search-filter input[type="text"] {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid var(--text);
-  border-radius: 4px;
-  background: var(--textFill);
-}
-
+.search-filter input[type="text"],
 .search-filter select {
   padding: 8px;
   border: 1px solid var(--text);
   border-radius: 4px;
   background: var(--textFill);
+  flex: 1;
 }
 
-/* product */
 .product {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
 }
 
-.pCard {
+.spell-card {
   background: var(--ter);
   padding: 15px;
   border-radius: 8px;
@@ -125,27 +118,29 @@ main {
   transition: box-shadow 0.3s;
   cursor: pointer;
 }
-.pCard:hover {
+
+.spell-card:hover {
   box-shadow: 0 0 10px #ccc;
 }
 
-.pCard img {
+.spell-card  img {
   width: 100%;
-  height: auto;
+  height: 120px;            
+  object-fit: cover;         
   border-radius: 8px;
 }
 
-.pCard h3 {
+.spell-card  h3 {
   margin: 10px 0 5px;
   font-size: var(--subparagraph);
 }
 
-.pCard p {
+.spell-card p {
   font-size: var(--paragraphs);
   margin-bottom: 10px;
 }
 
-.pCard button {
+.spell-card button {
   background: var(--sec);
   color: var(--text);
   border: none;
@@ -155,7 +150,7 @@ main {
   transition: background 0.3s;
 }
 
-.pCard button:hover {
+.spell-card button:hover {
   background: var(--prim);
 }
 
@@ -176,6 +171,60 @@ main {
   font-size: var(--heading);
 }
 
+#detailContent {
+  padding: 10px 0;
+  font-size: var(--paragraphs);
+}
+
+#detailContent h3 {
+  font-size: var(--subparagraph);
+  margin-bottom: 10px;
+}
+
+#detailContent img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.detail-category {
+  display: inline-block;
+  background: var(--sec);
+  color: var(--text);
+  padding: 4px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: var(--paragraphs);
+}
+
+.detail-pronunciation {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.detail-description {
+  margin-bottom: 10px;
+}
+
+.detail-mentioned {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.detail-mentioned li {
+  background: var(--accent);
+  color: var(--prim);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: var(--paragraphs);
+}
 
 /* footer */
 footer {

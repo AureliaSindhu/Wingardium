@@ -132,3 +132,68 @@ const spells = [
     mentioned: []
   }
 ];
+
+// ------------------
+// functions 
+// ------------------
+
+// 1. Spell Cards 
+function displaySpells(){ 
+  const container = document.getElementById("spellsContainer");
+  container.innerHTML = ""; // Clear previous content
+
+  spells.forEach(spell => {
+    const card = document.createElement("div");
+    card.classList.add("spell-card");
+    
+    const img = document.createElement("img");
+    img.src = spell.image;
+    img.alt = spell.name;
+    card.appendChild(img);
+
+    const title = document.createElement("h3");
+    title.textContent = spell.name;
+    card.appendChild(title);
+
+    const desc = document.createElement("p");
+    let shortDesc = spell.description.substring(0, 50) + "...";
+    if (spell.description.length <= 15) {
+      shortDesc = spell.description;
+    }
+    desc.textContent = shortDesc;
+    card.appendChild(desc);
+
+    const button = document.createElement("button");
+    button.textContent = "See Details";
+    button.classList.add("see-details");
+    button.addEventListener("click", () => { //show details on click
+      showSpellDetails(spell);
+    });
+    card.appendChild(button);
+
+    container.appendChild(card);
+  });
+}
+
+// 2. Spell Details -- call pop-up
+function showSpellDetails(spell){
+  const detailContent = document.getElementById("detailContent"); 
+  detailContent.innerHTML = `
+    <h3>${spell.name}</h3>
+    <img src="${spell.image}" alt="${spell.name}">
+    <div class="detail-category"><strong>Category:</strong> ${spell.category.join(", ")}</div>
+    <p class="detail-pronunciation"><strong>Pronunciation:</strong> ${spell.pronunciation}</p>
+    <p class="detail-description"><strong>Description:</strong> ${spell.description}</p>
+    <p><strong>First Mentioned:</strong></p>
+    <ul class="detail-mentioned">
+      ${spell.mentioned.map(item => `<li>${item}</li>`).join("")}
+    </ul>
+    `
+}
+
+// ------------------
+// on load  
+// ------------------
+document.addEventListener("DOMContentLoaded", () => {
+  displaySpells();
+});
