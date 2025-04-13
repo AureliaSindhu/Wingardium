@@ -167,6 +167,7 @@ function displaySpells(spellsArray = spells) { //update to accept array (default
     button.textContent = "See Details";
     button.classList.add("see-details");
     button.addEventListener("click", () => { //show details on click
+      console.log("See Details clicked for:", spell.name); // Check which spell's details are being shown
       showSpellDetails(spell);
     });
     card.appendChild(button);
@@ -177,6 +178,7 @@ function displaySpells(spellsArray = spells) { //update to accept array (default
 
 // 2. Spell Details -- call pop-up
 function showSpellDetails(spell){
+  console.log("Showing details for spell:", spell); // Debugging: Check the spell object being passed
   const detailContent = document.getElementById("detailContent"); 
   
   const categoriesHTML = spell.category //map through each category for design purposes
@@ -185,14 +187,27 @@ function showSpellDetails(spell){
 
   detailContent.innerHTML = `
     <h3>${spell.name}</h3>
+
     <img src="${spell.image}" alt="${spell.name}">
+
     <div class="detail-category">
       <strong></strong> 
       ${categoriesHTML}
     </div>
-    <p class="detail-pronunciation"><strong>Pronunciation:</strong> ${spell.pronunciation}</p>
-    <p class="detail-description"><strong>Description:</strong> ${spell.description}</p>
-    <p><strong>First Mentioned:</strong></p>
+
+    <p class="detail-pronunciation">
+      <strong>Pronunciation:</strong> 
+      ${spell.pronunciation}
+    </p>
+
+    <p class="detail-description">
+      <strong>Description:</strong> 
+      ${spell.description}
+    </p>
+
+    <p>
+      <strong> Mentioned:</strong>
+    </p>
     <ul class="detail-mentioned">
       ${spell.mentioned.map(item => `<li>${item}</li>`).join("")}
     </ul>
@@ -218,8 +233,15 @@ function filterSpells(){
 // on load  
 // ------------------
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("Document loaded. Initializing...");
   displaySpells();
 
-  document.getElementById("searchBar").addEventListener("input", filterSpells);
-  document.getElementById("filterSelect").addEventListener("change", filterSpells);
+  document.getElementById("searchBar").addEventListener("input", () => {
+    console.log("Search input changed:", document.getElementById("searchBar").value);
+    filterSpells();
+  });
+  document.getElementById("filterSelect").addEventListener("change", () => {
+    console.log("Filter changed:", document.getElementById("filterSelect").value);
+    filterSpells();
+  });
 });
