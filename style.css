@@ -45,17 +45,17 @@ a:hover {
 
 
 /* header */
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header h1 {
+header h1 {
   margin: 0;
 }
 
-.header ul {
+header ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
@@ -65,8 +65,19 @@ a:hover {
   margin: 0;
 }
 
-.header ul li {
+header ul li {
   margin: 0 10px;
   padding: 5px;
   font-size: var(--paragraphs);
+}
+
+/* main */
+
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
