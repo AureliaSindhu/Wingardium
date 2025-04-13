@@ -1,12 +1,12 @@
 :root {
   /* color palette */
-  --prim:     #360101;
-  --sec:      #740001;
-  --ter:      #F5EBDD;
-  --accent:   #D4AF37;
-  --icon:     #4E342E;
-  --text:     #2F2F2F;
-  --textFill: #FCF8F3;
+  --prim:     #161b22;
+  --sec:      #21262d;
+  --ter:      #89929b;
+  --accent:   #faa356;
+  --icon:     #7ce38b;
+  --text:     #ecf2f8;
+  --textFill: #c6cdd5;
 
   /* typography */
   --title: 48px;
@@ -25,14 +25,14 @@ body {
 }
 
 ::selection {
-  background: #c3c3c3ed;
+  background: var(--sec);
   color: var(--icon);
 }
 
 /* links */
 a {
   text-decoration: none;
-  color: var(--textFill);
+  color: var(--text);
   transition: color 0.5s ease;
 }
 
@@ -75,7 +75,6 @@ main {
 .hero p {
   margin: 0;
   padding-bottom: 10px;
-  color: var(--textFill);
 }
 
 .hero-content {
@@ -119,7 +118,7 @@ main {
 }
 
 .pCard {
-  background: var(--textFill);
+  background: var(--ter);
   padding: 15px;
   border-radius: 8px;
   text-align: center;
@@ -148,7 +147,7 @@ main {
 
 .pCard button {
   background: var(--sec);
-  color: var(--textFill);
+  color: var(--text);
   border: none;
   padding: 8px 12px;
   border-radius: 4px;
@@ -184,6 +183,5 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 5px 30px;
-  background-color: #2d0101;
-  color: var(--textFill);
+  background-color: #0d1117;
 }
