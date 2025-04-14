@@ -107,6 +107,12 @@ header ul li a:hover::after {
 .hero h2 {
   font-size: var(--heading);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  flex: inline;
+}
+
+.hero h2 img{ 
+  width: 30px;
+  height: 30px;
 }
 
 .hero p {
@@ -220,6 +226,7 @@ header ul li a:hover::after {
 .popup {
   background: var(--prim);
   color: var(--text);
+  /* height: 100%; */
   padding: 25px;
   border-radius: 12px;
   text-align: center;
@@ -238,7 +245,7 @@ header ul li a:hover::after {
 
 #detailContent h3 {
   font-size: var(--subparagraph);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #detailContent img {
@@ -299,7 +306,7 @@ footer {
 }
 
 footer a {
-  color: var(--prim);
+  color: var(--text);
   font-size: var(--paragraphs);
   transition: color 0.3s ease;
 }

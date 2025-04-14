@@ -186,7 +186,7 @@ function showSpellDetails(spell){
     .join(" ");
 
   detailContent.innerHTML = `
-    <h3>${spell.name}</h3>
+    <h2>${spell.name}</h2>
 
     <img src="${spell.image}" alt="${spell.name}">
 
