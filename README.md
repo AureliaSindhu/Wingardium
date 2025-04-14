@@ -1,7 +1,7 @@
 # [Wingardium](#)
 > ### SEA Stage 2 - Data Catalog Project
 
-<!-- <img src="" /> -->
+<img src="img/thumbnail.png" />
 
 <div align = "left">
    <p> built with </p>
