@@ -22,30 +22,30 @@
         <h2>Welcome to the Wizard's Emporium <img src="img/icon.png"/></h2>
         <p>Discover enchanting spells, potions, and artifacts!</p>
       </div>
+
+      <div class="search-filter">
+        <input 
+          type="text" 
+          id="searchBar" 
+          placeholder="Search magical items..."
+          aria-label="Search Magic"
+        />
+        <select id="filterSelect" aria-label="Filter Magic">
+          <option value="all">All</option>
+          <option value="charm">Charm</option>
+          <option value="conjuration">Conjuration</option>
+          <option value="curse">Curse</option>
+          <option value="dark charm">Dark Charm</option>
+          <option value="healing spell">Healing Spell</option>
+          <option value="jinx">Jinx</option>
+          <option value="transfiguration">Transfiguration</option>
+          <option value="transportation">Transportation</option>
+        </select>
+      </div>
       
       <div class="hero-content">
         <!-- left: spells -->
         <section class="left">
-          <div class="search-filter">
-            <input 
-              type="text" 
-              id="searchBar" 
-              placeholder="Search magical items..."
-              aria-label="Search Magic"
-            />
-            <select id="filterSelect" aria-label="Filter Magic">
-              <option value="all">All</option>
-              <option value="charm">Charm</option>
-              <option value="conjuration">Conjuration</option>
-              <option value="curse">Curse</option>
-              <option value="dark charm">Dark Charm</option>
-              <option value="healing spell">Healing Spell</option>
-              <option value="jinx">Jinx</option>
-              <option value="transfiguration">Transfiguration</option>
-              <option value="transportation">Transportation</option>
-            </select>
-          </div>
-
           <!-- Spell Cards -->
           <div class="product" id="spellsContainer">
             <!-- integrated in script.js -->
@@ -61,6 +61,12 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="req">
+        <h2> Don't see what you're looking for? </h2>
+        <p> Wingardium is always open for new magic spells that we miss.</p>
+        <button id="requestButton">Request a Spell</button>
       </div>
     </main>
 

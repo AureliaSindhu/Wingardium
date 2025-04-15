@@ -44,13 +44,16 @@ a {
 a:hover {
   color: var(--sec);
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px;
   padding: 10px 30px;
   background: linear-gradient(90deg, var(--prim) 0%, var(--sec) 100%);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
 }
 
 header h1 {
@@ -99,14 +102,17 @@ header ul li a:hover::after {
 .hero {
   text-align: center;
   padding: 20px;
-  /* background: linear-gradient(135deg, var(--sec), var(--ter)); */
+  background: var(--accent);
   color: var(--prim);
-  /* box-shadow: inset 0 -6px 12px rgba(0,0,0,0.1); */
+  border-radius: 10px;
+  margin: 20px 30px;
+  box-shadow: inset 0 -6px 12px rgba(0,0,0,0.1);
 }
 
 .hero h2 {
+  margin-bottom: 5px;
   font-size: var(--heading);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); */
   flex: inline;
 }
 
@@ -117,6 +123,7 @@ header ul li a:hover::after {
 
 .hero p {
   font-size: var(--paragraphs);
+  margin-bottom: 5px;
 }
 
 .hero-content {
@@ -125,20 +132,23 @@ header ul li a:hover::after {
   padding: 30px;
 }
 
-/* left */
-.left {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-}
-
+/* search filter */
 .search-filter {
+  margin: 0px 30px;
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
-.search-filter input[type="text"],
+.search-filter input[type="text"] {
+  flex: 3;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background: var(--textFill);
+  font-size: var(--paragraphs);
+  transition: box-shadow 0.3s ease;
+}
+
 .search-filter select {
   flex: 1;
   padding: 12px 15px;
@@ -153,6 +163,14 @@ header ul li a:hover::after {
 .search-filter select:focus {
   outline: none;
   box-shadow: 0 0 0 2px var(--accent);
+}
+
+
+/* left */
+.left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
 }
 
 .product {
@@ -180,7 +198,6 @@ header ul li a:hover::after {
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Card Image */
 .spell-card img {
   width: 100%;
   height: 160px;
@@ -292,6 +309,40 @@ header ul li a:hover::after {
   margin: 10px;
   border-radius: 10px;
   font-size: var(--paragraphs);
+}
+
+/* req */
+.req {
+  margin: 10px 30px 30px 30px;
+  text-align: center;
+  border-top: 1px solid var(--sec);
+  padding-top: 30px;
+}
+
+.req h2 {
+  font-size: var(--heading);
+  margin-bottom: 10px;
+}
+
+.req p {
+  font-size: var(--paragraphs);
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.req button{
+  background: rgba(182, 70, 95, 0.6);
+  color: var(--sec);
+  padding: 10px 20px;
+  border: 1px solid var(--ter);
+  border-radius: 10px;
+  margin: 10px;
+  font-size: var(--paragraphs);
+}
+
+.req button:hover{ 
+  background-color: var(--sec);
+  color: var(--text);
 }
 
 /* footer */
