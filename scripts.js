@@ -3,7 +3,7 @@ const spells = [
     id: 1, 
     name: "Aguamenti",
     category: ["Charm", "Conjuration"],
-    image: "/img/aguamenti.png",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/9/95/B6C28_Aguamenti_PM.png/revision/latest?cb=20241130182413",
     pronunciation: "AH-gwah-MEN-tee",
     description: "Produces a clean, drinkable jet of water from the wand tip.",
     mentioned: [
@@ -16,7 +16,7 @@ const spells = [
     id: 2,
     name: "Alarte Ascendare",
     category: ["Charm"],
-    image: "/img/alarte.webp",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/c/c4/Alarte_Ascendare.gif/revision/latest?cb=20190402152136",
     pronunciation: "a-LAR-tay a-SEN-der-ay",
     description: "Shoots the target high into the air.",
     mentioned: [
@@ -27,7 +27,7 @@ const spells = [
     id: 3,
     name: "Anti-Intruder Jinx",
     category: ["Jinx"],
-    image: "/img/anti-intruder.webp",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdUZd96O51hqa5yAvVljuqZ91orNzfoWb-4g&s",
     pronunciation: "N/A",
     description: "Prevents intruders from entering an area; similar in effect to the Anti-Apparition Charm.",
     mentioned: [
@@ -38,7 +38,7 @@ const spells = [
     id: 4,
     name: "Antonin Dolohov's Curse",
     category: ["Curse"],
-    image: "/img/antonin.webp",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/6/69/DeathEatersBattle.jpg/revision/latest?cb=20081115070554",
     pronunciation: "N/A",
     description: "An unknown curse that causes injuries capable of killing if cast with sufficient power.",
     mentioned: [
@@ -49,7 +49,7 @@ const spells = [
     id: 5,
     name: "Aparecium",
     category: ["Charm"],
-    image: "/img/aparecium.webp",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/0/02/Aparecium.jpg/revision/latest?cb=20180801200919",
     pronunciation: "AH-par-EE-see-um",
     description: "Reveals secret messages written in invisible ink or other hidden markings; also works against Concealing charms.",
     mentioned: [
@@ -60,7 +60,7 @@ const spells = [
     id: 6,
     name: "Appare Vestigium",
     category: ["Charm"],
-    image: "/img/appare.webp",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/0/01/COG_Newt_Appare_Vestigium.gif/revision/latest?cb=20190224141035",
     pronunciation: "ah-PAR-ay ves-TEE-jee-um",
     description: "Reveals traces of magic, including footprints and other track marks.",
     mentioned: [
@@ -71,7 +71,7 @@ const spells = [
     id: 7,
     name: "Avifors",
     category: ["Transfiguration"],
-    image: "/img/avifors.webp",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/9/96/Avifors.jpg/revision/latest?cb=20090904212154",
     pronunciation: "AH-vi-fors",
     description: "Transforms the target into a bird.",
     mentioned: [
@@ -82,7 +82,7 @@ const spells = [
     id: 8,
     name: "Avada Kedavra",
     category: ["Curse"],
-    image: "/img/avada.webp",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/7/78/Avada-Kedavra.gif/revision/latest/thumbnail/width/360/height/360?cb=20180412031022",
     pronunciation: "ah-VAH-dah keh-DAV-rah",
     description: "Causes instantaneous and painless death, leaving no physical injury or trace of violence. Cast with a bright flash or a long stream of green light and a rushing noise.",
     mentioned: [
@@ -93,7 +93,7 @@ const spells = [
     id: 9,
     name: "Apparition",
     category: ["Transportation"],
-    image: "/img/apparition.webp",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/3/30/Hermione_and_Harry_apparating.gif/revision/latest/scale-to-width-down/250?cb=20240608194641",
     pronunciation: "N/A",
     description: "Magically teleports the user to another location instantly. The destination is one the user has seen or been to before and can sometimes transport multiple people if they hold on to each other (Side-Along Apparition). No incantation is required.",
     mentioned: [
@@ -104,7 +104,7 @@ const spells = [
     id: 10,
     name: "Anapneo",
     category: ["Healing Spell", "Vanishment"],
-    image: "/img/anapneo.webp",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/2/2e/Celestina_Warbeck%27s_throat_unblocked_HM.png/revision/latest?cb=20220818132336",
     pronunciation: "ah-NAP-nee-oh",
     description: "Clears the target's airway if they are choking on something.",
     mentioned: [
@@ -115,7 +115,7 @@ const spells = [
     id: 11,
     name: "Anteoculatia",
     category: ["Dark Charm"],
-    image: "/img/anteoculatia.avif",
+    image: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/11/pansy-parkinson-trying-to-turn-harry-to-voldemort-in-harry-potter-and-the-deathly-hallows.jpg",
     pronunciation: "an-tee-oh-kyoo-LAY-chee-ah",
     description: "Causes the target to grow antlers.",
     mentioned: [
@@ -126,7 +126,7 @@ const spells = [
     id: 12,
     name: "Amato Animo Animato Animagus",
     category: ["Transfiguration"],
-    image: "/img/amato.avif",
+    image: "https://static.wikia.nocookie.net/harrypotter/images/8/8e/B3C18M1_Marauders.jpg/revision/latest?cb=20241207131613",
     pronunciation: "ah-MAH-toh ah-NEE-moh ah-nee-MAH-toh an-a-MAY-jus",
     description: "Spell used as part of the process of becoming an Animagus. The incantation is recited at sunrise and sundown, every day before consuming the Animagus Potion, and also just after a lightning storm starts while placing the wand’s tip over one's heart.",
     mentioned: []
