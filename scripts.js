@@ -142,6 +142,17 @@ function displaySpells(spellsArray = spells) { //update to accept array (default
   const container = document.getElementById("spellsContainer");
   container.innerHTML = ""; // Clear previous content
 
+  if (spellsArray.length === 0) {
+    container.classList.add("no-results-state");
+    const noResults = document.createElement("p");
+    noResults.classList.add("no-results");
+    noResults.textContent = "No results";
+    container.appendChild(noResults);
+    return;
+  } else {
+    container.classList.remove("no-results-state");
+  }
+
   spellsArray.forEach(spell => {
     const card = document.createElement("div");
     card.classList.add("spell-card");
@@ -229,6 +240,17 @@ function filterSpells(){
   displaySpells(filteredSpells);
 }
 
+// 4. Handle request spell with alert
+function handleRequestSpell() {
+  const requestedSpell = prompt("Enter the name of the magic spell you'd like to request:");
+  
+  if (requestedSpell && requestedSpell.trim()) {
+    alert(`Thank you for your suggestion! We will consider adding "${requestedSpell}" to our catalog.`);
+  } else {
+    alert("Please enter a valid spell name.");
+  }
+}
+
 // ------------------
 // on load  
 // ------------------
@@ -244,4 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Filter changed:", document.getElementById("filterSelect").value);
     filterSpells();
   });
+
+  document.getElementById("requestButton").addEventListener("click", handleRequestSpell); 
+
 });

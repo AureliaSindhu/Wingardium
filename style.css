@@ -165,6 +165,19 @@ header ul li a:hover::after {
   box-shadow: 0 0 0 2px var(--accent);
 }
 
+#spellsContainer.no-results-state {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+  min-height: 200px;
+}
+
+.no-results {
+  width: 100%;
+  text-align: center;
+  color: grey;
+  font-size: 1.2rem;
+}
 
 /* left */
 .left {
