@@ -240,15 +240,91 @@ function filterSpells(){
   displaySpells(filteredSpells);
 }
 
-// 4. Handle request spell with alert
-function handleRequestSpell() {
-  const requestedSpell = prompt("Enter the name of the magic spell you'd like to request:");
-  
-  if (requestedSpell && requestedSpell.trim()) {
-    alert(`Thank you for your suggestion! We will consider adding "${requestedSpell}" to our catalog.`);
-  } else {
-    alert("Please enter a valid spell name.");
-  }
+// 4. Create modal 
+function createSpellRequestModal(){
+  const modal = document.createElement("div");
+  modal.id = "requestModal";
+  modal.classList.add("modal");
+
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("modal-content");
+
+  const title = document.createElement("h2");
+  title.textContent = "Request a Spell";
+  modalContent.appendChild(title);
+
+  const form = document.createElement("form");
+  form.id = "spellRequestForm";
+
+  const nameLabel = document.createElement("label");
+  nameLabel.textContent = "Spell Name:";
+  const nameInput = document.createElement("input");
+  nameInput.type = "text";
+  nameInput.id = "spellNameInput";
+  nameInput.placeholder = "Spell name...";
+  nameLabel.appendChild(nameInput);
+  form.appendChild(nameLabel);
+
+  const descLabel = document.createElement("label");
+  descLabel.textContent = "Description: ";
+  const descInput = document.createElement("textarea");
+  descInput.id = "spellDescriptionInput";
+  descInput.placeholder = "Enter spell description...";
+  descLabel.appendChild(descInput);
+  form.appendChild(descLabel);
+
+  const submitButton = document.createElement("button");
+  submitButton.type = "submit";
+  submitButton.id = "submitSpellRequest";
+  submitButton.textContent = "Submit Request";
+  form.appendChild(submitButton);
+
+  const closeButton = document.createElement("button");
+  closeButton.type = "button";
+  closeButton.id = "closeSpellRequest";
+  closeButton.textContent = "Close";
+  form.appendChild(closeButton);
+
+  modalContent.appendChild(form);
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
+
+  closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const spellName = nameInput.value.trim();
+    const description = descInput.value.trim();
+
+    if (spellName && description) {
+      modalContent.innerHTML = `
+        <h2>Thank You!</h2>
+        <p>Thanks for submitting your request for <strong>${spellName}</strong>!</p>
+      `;
+
+      console.log("Spell request submitted:", {
+        spellName,
+        description,
+      });
+
+      setTimeout(() => {
+        modal.style.display = "none";
+        modal.remove();
+      }, 2000);
+    } else {
+      if (!spellName) nameInput.style.border = "1px solid red";
+      if (!description) descInput.style.border = "1px solid red";
+    }
+  });
 }
 
 // ------------------
@@ -267,6 +343,12 @@ document.addEventListener("DOMContentLoaded", () => {
     filterSpells();
   });
 
-  document.getElementById("requestButton").addEventListener("click", handleRequestSpell); 
-
+  document.getElementById("requestButton").addEventListener("click", () => {
+    let modal = document.getElementById("requestModal");
+    if (!modal){
+      createSpellRequestModal();
+      modal = document.getElementById("requestModal");
+    }
+    modal.style.display = "block";
+  });
 });
