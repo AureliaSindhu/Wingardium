@@ -3,7 +3,7 @@ const spells = [
     id: 1, 
     name: "Aguamenti",
     category: ["Charm", "Conjuration"],
-    image: "/img/aguamenti.webp",
+    image: "/img/aguamenti.png",
     pronunciation: "AH-gwah-MEN-tee",
     description: "Produces a clean, drinkable jet of water from the wand tip.",
     mentioned: [
