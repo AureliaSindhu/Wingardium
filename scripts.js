@@ -3,7 +3,7 @@ const spells = [
     id: 1, 
     name: "Aguamenti",
     category: ["Charm", "Conjuration"],
-    image: "https://static.wikia.nocookie.net/harrypotter/images/9/95/B6C28_Aguamenti_PM.png/revision/latest?cb=20241130182413",
+    image: "./img/aguamenti.png",
     pronunciation: "AH-gwah-MEN-tee",
     description: "Produces a clean, drinkable jet of water from the wand tip.",
     mentioned: [
