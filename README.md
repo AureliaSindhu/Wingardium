@@ -1,4 +1,4 @@
-# [Wingardium](https://github.com/AureliaSindhu/Wingardium)
+# [Wingardium](https://aureliasindhu.github.io/Wingardium/)
 > ### SEA Stage 2 - Data Catalog Project
 
 <img src="img/thumbnail.png" />
