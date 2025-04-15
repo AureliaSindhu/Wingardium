@@ -1,20 +1,24 @@
 let spells =[]
 
-fetch("spells.json")
-  .then((response) => response.json())
-  .then((data) => {
-    spells = data;
+// fetching data from JSON 
+window.onload = async function () {
+  try {
+    const response = await fetch("spells.json");
+    const data = await response.json();
+    spells = data; 
     displaySpells(spells);
-    populateFilterOptions();
-  })
-  .catch((error) => console.error("Error loading spells:", error));
+    populateFilterOpt();
+  } catch (error) {
+    console.error("Error loading spells:", error);
+  }
+};
 
 // ------------------
 // functions 
 // ------------------
 
 // 1. Spell Cards 
-function displaySpells(spellsArray = spells) { //update to accept array (default to spells arr)  
+function displaySpells(spellsArray = spells) { 
   const container = document.getElementById("spellsContainer");
   container.innerHTML = ""; // Clear previous content
 
@@ -54,7 +58,7 @@ function displaySpells(spellsArray = spells) { //update to accept array (default
     button.textContent = "See Details";
     button.classList.add("see-details");
     button.addEventListener("click", () => { //show details on click
-      console.log("See Details clicked for:", spell.name); // Check which spell's details are being shown
+      console.log("See Details clicked for:", spell.name); 
       showSpellDetails(spell);
     });
     card.appendChild(button);
@@ -101,20 +105,46 @@ function showSpellDetails(spell){
     `
 }
 
-// 3. Filter function 
+// 3. Filter function Data
+function populateFilterOpt() {
+  const filterSelect = document.getElementById("filterSelect");
+  filterSelect.innerHTML = "";
+
+  const allOption = document.createElement("option");
+  allOption.value = "all";
+  allOption.textContent = "All";
+  filterSelect.appendChild(allOption);
+
+  const categorySet = new Set();
+  spells.forEach((spell) => {
+    spell.category.forEach((cat) => categorySet.add(cat.toLowerCase()));
+  });
+
+  Array.from(categorySet)
+    .sort()
+    .forEach((cat) => {
+      const option = document.createElement("option");
+      option.value = cat;
+      option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+      filterSelect.appendChild(option);
+    });
+}
+
+// 4. Filter function
 function filterSpells(){
   const searchTerm = document.getElementById("searchBar").value.toLowerCase();
   const filterValue = document.getElementById("filterSelect").value.toLowerCase();
 
   const filteredSpells = spells.filter(spell => {
-    const matchesSearch = spell.name.toLowerCase().includes(searchTerm) || spell.description.toLowerCase().includes(searchTerm);
+    const matchesSearch = searchTerm === "" || spell.name.toLowerCase().startsWith(searchTerm);
     const matchesCategory = (filterValue === "all") || spell.category.some(cat => cat.toLowerCase() === filterValue);
     return matchesSearch && matchesCategory;
   });
+  
   displaySpells(filteredSpells);
 }
 
-// 4. Create modal 
+// 5. Create modal 
 function createSpellRequestModal(){
   const modal = document.createElement("div");
   modal.id = "requestModal";
