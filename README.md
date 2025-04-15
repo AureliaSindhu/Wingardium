@@ -1,6 +1,8 @@
 # [Wingardium](https://aureliasindhu.github.io/Wingardium/)
 > ### SEA Stage 2 - Data Catalog Project
 
+⚯ ͛ | Harry Potter's Spell Catalog 
+
 <img src="img/thumbnail.png" />
 
 <!-- ### built with:  -->

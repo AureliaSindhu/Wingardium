@@ -21,7 +21,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
@@ -114,7 +115,6 @@ header ul li a:hover::after {
   margin-bottom: 5px;
   font-size: var(--heading);
   /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); */
-  flex: inline;
 }
 
 .hero h2 img { 
@@ -135,7 +135,7 @@ header ul li a:hover::after {
 
 /* search filter */
 .search-filter {
-  margin: 0px 30px;
+  margin: 0 30px;
   display: flex;
   gap: 10px;
 }
@@ -171,7 +171,7 @@ header ul li a:hover::after {
 #spellsContainer.no-results-state {
   display: flex;
   flex-wrap: wrap;
-  align-items: center; 
+  align-items: center;
   min-height: 200px;
 }
 
@@ -207,7 +207,6 @@ header ul li a:hover::after {
   gap: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
 }
 
 .spell-card:hover {
@@ -226,12 +225,10 @@ header ul li a:hover::after {
 .spell-card h3 {
   margin: 10px 0 5px;
   font-size: var(--subparagraph);
-  color: var(--prim);
 }
 
 .spell-card p {
   font-size: var(--paragraphs);
-  color: var(--prim);
   opacity: 0.9;
   margin-bottom: 10px;
 }
@@ -261,7 +258,6 @@ header ul li a:hover::after {
 .popup {
   background: var(--prim);
   color: var(--text);
-  /* height: 100%; */
   padding: 25px;
   border-radius: 12px;
   text-align: center;
@@ -269,9 +265,8 @@ header ul li a:hover::after {
 }
 
 .popup h2 {
-  margin-top: 0;
+  margin: 0 0 15px;
   font-size: var(--heading);
-  margin-bottom: 15px;
 }
 
 #detailContent {
@@ -331,7 +326,7 @@ header ul li a:hover::after {
 
 /* req section */
 .req {
-  margin: 10px 30px 30px 30px;
+  margin: 10px 30px 30px;
   text-align: center;
   border-top: 1px solid var(--sec);
   padding-top: 30px;
@@ -365,20 +360,20 @@ header ul li a:hover::after {
 
 /* modal */
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1000; 
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
   background-color: var(--text);
-  margin: 10% auto; 
+  margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 90%;
@@ -431,13 +426,13 @@ header ul li a:hover::after {
 
 .modal-content input::placeholder,
 .modal-content textarea::placeholder {
-  font-family: 'Poppins', sans-serif; 
-  color: #999; 
+  font-family: 'Poppins', sans-serif;
+  color: #999;
 }
 
 #closeSpellRequest {
-  background-color: #bdbdbd; 
-  color: #333; 
+  background-color: #bdbdbd;
+  color: #333;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
